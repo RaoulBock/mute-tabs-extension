@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tab Muter</title>
+    <title>SilentTabs</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h2>SilentTabs</h2>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search tabs..." />
+      <button id="refreshBtn">Refresh</button>
+    </div>
+
+    <div class="audio-filter">
+      <label>
+        <input type="checkbox" id="filterAudible" />
+        Show only tabs playing audio
+      </label>
+    </div>
+
     <ul id="tabList"></ul>
+
+    <a href="options.html" target="_blank" class="settings-link">Settings</a>
+
+    <script src="popup.js"></script>
   </body>
-  <script src="popup.js"></script>
 </html>

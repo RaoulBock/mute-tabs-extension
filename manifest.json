@@ -1,14 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "Tab Muter",
-  "version": "1.0",
-  "description": "Mute and unmute tabs easily",
-  "permissions": ["tabs"],
+  "name": "SilentTabs",
+  "version": "2.0.0",
+  "description": "Mute and manage tab audio with style.",
+  "permissions": ["tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "128": "icons/icon128.png"
     }
   },
-  "host_permissions": ["<all_urls>"]
+  "options_page": "options.html",
+  "commands": {
+    "toggle-mute": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+M"
+      },
+      "description": "Toggle mute on current tab"
+    }
+  }
 }
